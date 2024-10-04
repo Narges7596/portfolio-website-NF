@@ -444,8 +444,8 @@ header {
         display: grid;
         grid-gap: 30px;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        height: 1920px;
+        grid-template-rows: repeat(6, 1fr);
+        height: 1000px;
 
         @media (max-width:1024px) {
             display: flex;
@@ -470,14 +470,37 @@ header {
                 object-fit: cover;
                 transition: ease 3s all;
             }
+            .project-detail {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: var(--base-100);
+                text-align: left;
+                padding: 10px;
+                opacity: 0;
+                visibility: hidden;
+                transition: ease 0.3s all;
+                ul {
+                    gap: 15px;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+
             &:hover {
                 img {
                     transform: scale(1.2);
                 }
+                .project-detail {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
 
             @media (max-width:1024px) {
-                height: 240px;
+                height: 300px;
             }
 
             &:nth-child(1) {
