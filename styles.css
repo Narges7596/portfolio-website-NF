@@ -275,8 +275,8 @@ header {
         justify-content: center;
         align-items: end;
         img {
-            margin-top: -70px;
-            max-width: 420px;
+            margin-top: -10px;
+            max-width: 600px;
         }
     }
 }
